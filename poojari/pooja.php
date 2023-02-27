@@ -3,12 +3,12 @@ session_start();
 include("includes/header.php");
 include("config/dbcon.php");
 ?>
-    <div class="container-fluid px-4">
-        <h1 class="mt-4">Dashboard</h1>
-        <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item active"><a href="index.php" class="text-decoration-none"> Dashboard</a></li>
-            <li class="breadcrumb-item ">Pooja Service</li>
-        </ol>
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Dashboard</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active"><a href="index.php" class="text-decoration-none"> Dashboard</a></li>
+        <li class="breadcrumb-item ">Pooja Service</li>
+    </ol>
 
     <div class="row">
         <div class="col-md-12 mt-5">

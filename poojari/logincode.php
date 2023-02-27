@@ -5,7 +5,8 @@ if (isset($_POST['btnlogin'])) {
     $email = $_POST['txtemail'];
     $pass = $_POST['txtpass'];
     $qry = "select * from user where email='$email' and password='$pass'";
-    $qry1 = "select * from pandit where email='$email' and password='$pass' and status='accept'";
+    $qry1 = "select * from pandit where email='$email' and password='$pass'";
+
     $result = $con->query($qry);
     $count = mysqli_num_rows($result);
     $result1 = $con->query($qry1);
@@ -21,23 +22,17 @@ if (isset($_POST['btnlogin'])) {
 
         echo "<script type='text/javascript'>window.top.location='index.php';</script>";
 
-    } else {
-        $_SESSION['message']="Email or Password not match";
-        header("location:login.php");
-    }
-    if ($count1 > 0) {
+    } else if ($count1 > 0) {
         while ($row = $result1->fetch_assoc()) {
             $fname1 = $row['fname'];
             $lname1 = $row['lname'];
         }
         $_SESSION['auth1'] = true;
         $_SESSION['auth_user1'] = $fname1 . ' ' . $lname1;
-        header("location:poojari/index.php");
-        // echo "<script type='text/javascript'>window.top.location='admin/index.php';</script>";
+        echo "<script type='text/javascript'>window.top.location='admin/index.php';</script>";
         // echo "pandit";
-    }else{
-        $_SESSION['message']="Your request has not been accetep by admin";
-        header("location:login.php");
+    } else {
+        echo "Email or Password not match";
     }
 }
 ?>

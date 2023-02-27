@@ -1,4 +1,3 @@
-
 <head>
     <!-- <script>window.history.forward();</script> -->
     <meta charset="utf-8" />
@@ -29,12 +28,9 @@
 </head>
 
 <body class="sb-nav-fixed">
-    <?php 
-    include("includes/navbar.php");
-    ?>
-    
+    <?php include("includes/navbar.php"); ?>
     <div id="layoutSidenav">
-        <?php include("includes/sidebar.php");?>
+        <?php include("includes/sidebar.php"); ?>
 
         <div id="layoutSidenav_content">
             <main>
