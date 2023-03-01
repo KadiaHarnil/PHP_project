@@ -3,11 +3,11 @@ include("includes/header.php");
 include("config/dbcon.php");
 // ?>
 <div class="container-fluid px-4">
-    <h1 class="mt-4">Accepted Request</h1>
+    <h1 class="mt-4">Pending Request</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active"><a href="index.php" class="text-decoration-none">Accepted Request</a></li>
+        <li class="breadcrumb-item active"><a href="index.php" class="text-decoration-none">Pending Request</a></li>
         <li class="breadcrumb-item ">Request</li>
-        <li class="breadcrumb-item ">Accepted</li>
+        <li class="breadcrumb-item ">Pending</li>
     </ol>
     <div class="row">
         <div class="col-md-12 mt-5">
@@ -28,7 +28,7 @@ include("config/dbcon.php");
                             </tr>
                         </thead>
                         <?php
-                        $qry = "select pid,fname,lname,email,phno,status from pandit where status='accept'";
+                        $qry = "select pid,fname,lname,email,phno,status from pandit where status='reject'";
                         $result = $con->query($qry);
                         while ($row = $result->fetch_assoc()):
                             ?>

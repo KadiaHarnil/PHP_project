@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("includes/header.php");
 include("config/dbcon.php");
 ?>
@@ -14,7 +13,6 @@ include("config/dbcon.php");
     <div class="row">
         <div class="col-md-12 mt-5">
             <div class="card">
-                <?php include("message.php"); ?>
                 <div class="card-header">
                     <h3>Add Pooja</h3>
                 </div>

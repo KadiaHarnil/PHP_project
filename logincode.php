@@ -27,16 +27,18 @@ if (isset($_POST['btnlogin'])) {
     }
     if ($count1 > 0) {
         while ($row = $result1->fetch_assoc()) {
+            $id=$row['pid'];
             $fname1 = $row['fname'];
             $lname1 = $row['lname'];
         }
         $_SESSION['auth1'] = true;
+        $_SESSION['auth_id1'] = $id;
         $_SESSION['auth_user1'] = $fname1 . ' ' . $lname1;
         header("location:poojari/index.php");
         // echo "<script type='text/javascript'>window.top.location='admin/index.php';</script>";
         // echo "pandit";
     }else{
-        $_SESSION['message']="Your request has not been accetep by admin";
+        $_SESSION['message']="Your request has not been accepted by admin";
         header("location:login.php");
     }
 }

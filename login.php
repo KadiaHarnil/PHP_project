@@ -52,7 +52,7 @@ include('includes/header.php');
                                             <hr>
                                             <a class="link float-end" href="#!">Forgot password</a><br>
                                             <a class="link float-end" href="userregistration.php">Signup As User</a><br>
-                                            <a class="link float-end" href="#!">Signup As Pojari</a>
+                                            <a class="link float-end" href="panditregistration.php">Signup As Pojari</a>
 
                                         </form>
 

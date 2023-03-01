@@ -23,9 +23,6 @@
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
-                <form action="logout1.php" method="post">
-                    <button class="dropdown-item" type="submit" name="btnlogout1">Logout</button>
-                </form>
             </ul>
         </li>
     </ul>

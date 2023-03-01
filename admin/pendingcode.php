@@ -13,4 +13,17 @@ if(isset($_POST['txtaccept']))
         echo "failed";
     }
 }
+if(isset($_POST['txtreject']))
+{   
+    $id=$_POST['txtid'];
+    $qry="UPDATE `pandit` SET `status`='reject' WHERE pid='$id'";
+    $result=$con->query($qry);
+    if($result)
+    {
+        header("location:reject.php");
+    }
+    else{
+        echo "failed";
+    }
+}
 ?>

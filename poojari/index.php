@@ -1,10 +1,10 @@
 <?php
 session_start();
-if(isset($_SESSION['auth']))
-{
-    header("location:../index.php");
-    exit(0);
-}
+// if(isset($_SESSION['auth']))
+// {
+//     header("location:../index.php");
+//     exit(0);
+// }
 if(!isset($_SESSION['auth1']))
 {
     header("location:../login.php");
