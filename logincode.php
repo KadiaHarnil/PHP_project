@@ -25,6 +25,9 @@ if (isset($_POST['btnlogin'])) {
         $_SESSION['message']="Email or Password not match";
         header("location:login.php");
     }
+
+
+    
     if ($count1 > 0) {
         while ($row = $result1->fetch_assoc()) {
             $id=$row['pid'];

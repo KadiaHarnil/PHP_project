@@ -9,7 +9,7 @@ include('includes/header.php');
     <div class="bg-image h-100">
         <div class="mask d-flex align-items-center h-40" style="background-color: #f3f2f2;">
             <div class="container">
-                <?php include("admin/message.php"); ?>
+                <?php include("poojari/message.php"); ?>
                 <div class="row d-flex justify-content-center align-items-center">
                     <div class="col-12 col-lg-9 col-xl-8">
                         <div class="card" style="border-radius: 1rem;">

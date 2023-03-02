@@ -6,6 +6,10 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Dashboard - POOJA Admin</title>
+    <link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+  rel="stylesheet"
+/>
      <!-- Summernote CSS - CDN Link -->
      <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
@@ -24,6 +28,7 @@
             $('#example').DataTable();
         });
     </script>
+
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 

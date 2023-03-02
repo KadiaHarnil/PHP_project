@@ -1,4 +1,4 @@
-<?php session_start();?>
+<?php session_start(); ?>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
     <a class="navbar-brand ps-3" href="index.php">Pujari Dashboard</a>
@@ -19,15 +19,18 @@
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#!"><?= $_SESSION['auth_user1'];?></a></li>
+                <li><a class="dropdown-item" href="#!">
+                        <?= $_SESSION['auth_user1']; ?>
+                    </a></li>
                 <li><a class="dropdown-item" href="#!">Settings</a></li>
                 <li><a class="dropdown-item" href="#!">Activity Log</a></li>
                 <li>
                     <hr class="dropdown-divider" />
                 </li>
-                <form action="logout1.php" method="post">
+                <hr class="dropdown-divider" />
+                 <form action="logout1.php" method="post">
                     <button class="dropdown-item" type="submit" name="btnlogout1">Logout</button>
-                </form>
+                    </form>
             </ul>
         </li>
     </ul>

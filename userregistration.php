@@ -16,7 +16,7 @@ $result = $con->query($qry);
                     <div class="card">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-4 pb-2">Registration Form</h3>
-                            <?php include("admin/message.php"); ?>
+                            <?php include("poojari/message.php"); ?>
                             <form action="userregistrtioncode.php" method="post">
 
                                 <div class="row">

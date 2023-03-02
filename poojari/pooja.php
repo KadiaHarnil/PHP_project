@@ -2,6 +2,10 @@
 session_start();
 include("includes/header.php");
 include("config/dbcon.php");
+if ($_SESSION['auth_id1']) {
+    $pid = $_SESSION['auth_id1'];
+    // echo $id;
+}
 ?>
 <div class="container-fluid px-4">
     <h1 class="mt-4">Dashboard</h1>
@@ -13,13 +17,12 @@ include("config/dbcon.php");
     <div class="row">
         <div class="col-md-12 mt-5">
             <div class="card">
-                <?php include("message.php"); ?>
                 <div class="card-header">
                     <h3>Pooja Service</h3>
-                    <div class="d-md-flex justify-content-md-end">
+                    <!-- <div class="d-md-flex justify-content-md-end">
 
                         <a class="btn btn-primary" href="addpooja.php" role="button">Add User</a>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="card-body">
                     <table id="example" class="display responsive nowrap" style="width:100%">
@@ -27,48 +30,32 @@ include("config/dbcon.php");
                             <tr>
                                 <th>PoojaName</th>
                                 <th>PoojaImg</th>
-                                <th>Approxtime</th>
-                                <th>Poojareq</th>
-                                <th>Edit</th>
+                                <th>Price</th>
+                                <!-- <th>Edit</th> -->
                                 <th>Delete</th>
                             </tr>
                         </thead>
                         <?php
-                        $qry = "select * from pooja";
+                        // echo $result;
+                        $qry = "select popaid,poojatitle,price,poojaimg from pooja p ,poojapandit poj where poj.poojaid=p.poojaid and poj.pid='$pid' group by poojatitle";
                         $result = $con->query($qry);
-                        while ($row = $result->fetch_assoc()) {
-                            $id = $row['poojaid'];
-                            $title = $row['poojatitle'];
-                            $time = $row['approxtime'];
-                            $req = $row['poojareq'];
-                            $img = "img/" . $row['poojaimg'];
-                            $pdf="<a href='pdfs/$req' target='_blank'><i class='fa-solid fa-file-pdf fa-2x'></i></a>";
+                        while ($row = $result->fetch_assoc()):
+                            $id=$row['popaid'];
                             ?>
                             <tr>
                                 <td>
-                                    <?php echo $title ?>
+                                    <?php echo $row['poojatitle']; ?>
                                 </td>
-                                <td><img src="<?php echo $img; ?>" height="300px" width="200px">
-                                </td>
-                                <td>
-                                    <?php echo $time ?>
+                                <td><img src="<?php echo 'img/' . $row['poojaimg']; ?>" height="300px" width="200px">
                                 </td>
                                 <td>
-                                    <?php echo $pdf; ?>
+                                    <?php echo $row['price'] ?>
                                 </td>
-                                <td>
-                                    <?php
-                                    echo "<a href='edit.php?id=$id'>Edit</a>";
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                    echo "<a href='delete.php?id=$id' onclick='return mydelete()'>Delete</a>";
-                                    ?>
+
+                                <td><a class="btn btn-danger" href="deletepooja.php?id=<?=$id;?>" role="button" onclick="return mydelete()">Delete</a>
                                 </td>
                             </tr>
-                        <?php } ?>
-
+                        <?php endwhile; ?>
                     </table>
 
                 </div>
@@ -77,6 +64,9 @@ include("config/dbcon.php");
 
     </div>
 </div>
+
+
 <?php
 include("includes/footer.php");
+include("includes/scripts.php");
 ?>

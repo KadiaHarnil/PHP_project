@@ -14,7 +14,7 @@ $result1=$con->query($qry1);
                     <div class="card">
                         <div class="card-body p-4 p-md-5">
                             <h3 class="mb-2 pb-2">Registration Form For Poojari</h3>
-                            <?php include("admin/message.php"); ?>
+                            <?php include("poojari/message.php"); ?>
                             <form action="panditregistrationcode.php" method="post" enctype="multipart/form-data">
 
                                 <div class="row">
