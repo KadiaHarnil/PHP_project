@@ -7,8 +7,9 @@ $result=$con->query($qry);
 ?>
 <option value="">--Cities--</option>
 <?php
-while($row=$result->fetch_assoc())
-{
+while($row=$result->fetch_assoc()){
+
+
     ?>
     <option value="<?= $row['name'];?>"><?= $row['name'];?></option>
     <?php

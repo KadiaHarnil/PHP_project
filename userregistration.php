@@ -20,7 +20,7 @@ $result = $con->query($qry);
                             <form action="userregistrtioncode.php" method="post">
 
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <div class="form-outline">
                                             <input type="text" id="firstName" class="form-control" name="txtfname" />
@@ -28,7 +28,7 @@ $result = $con->query($qry);
                                         </div>
 
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <div class="form-outline">
                                             <input type="text" id="lastName" class="form-control" name="txtlname" />
@@ -39,7 +39,7 @@ $result = $con->query($qry);
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <div class="form-outline datepicker">
                                             <input type="date" class="form-control" id="birthdayDate" name="txtdate" />
@@ -47,7 +47,7 @@ $result = $con->query($qry);
                                         </div>
 
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <h6 class="mb-2 pb-1">Gender: </h6>
 
@@ -68,7 +68,7 @@ $result = $con->query($qry);
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-12 mb-4">
+                                    <div class="col-md-12 mb-2">
 
                                         <div class="form-outline">
                                             <input type="email" id="emailAddress" name="txtemail"
@@ -81,7 +81,7 @@ $result = $con->query($qry);
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <div class="form-outline">
                                             <input type="password" id="password" name="txtpass" class="form-control" />
@@ -89,7 +89,7 @@ $result = $con->query($qry);
                                         </div>
 
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <div class="form-outline">
                                             <input type="password" id="conpassword" name="txtconpass"
@@ -100,13 +100,13 @@ $result = $con->query($qry);
                                     </div>
                                 </div>
 
-                                <div class="form-outline mb-4">
+                                <div class="form-outline mb-2">
                                     <textarea class="form-control" id="address" name="txtaddress" rows="4"></textarea>
                                     <label class="form-label" for="address">Address</label>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
                                         <select class="form-select" aria-label="Default select example" id="states"
                                             name="txtstate">
                                             <option selected>----States----</option>
@@ -118,17 +118,17 @@ $result = $con->query($qry);
                                         </select>
 
                                     </div>
-                                    <div class="col-md-6 mb-4">
+                                    <div class="col-md-6 mb-2">
 
                                         <select class="form-select" aria-label="Default select example" id="city"
                                             name="txtcity">
                                             <option selected>----City----</option>
                                         </select>
 
-                                    </div>
+                                            </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12 mb-4">
+                                    <div class="col-md-12 mb-2">
 
 
                                         <div class="input-group mb-3 form-outline mb-4">
